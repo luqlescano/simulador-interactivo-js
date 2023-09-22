@@ -12,7 +12,7 @@ let cuotasPrestamo = parseInt(prompt("¿En cuántas cuotas lo vas a devolver?"))
 
 while (cuotasPrestamo <= 11) {
     alert("El número de cuotas debe ser igual o mayor a 12");
-    cuotasPrestamo = prompt("¿En cuántas cuotas lo vas a devolver?");
+    cuotasPrestamo = parseInt(prompt("¿En cuántas cuotas lo vas a devolver?"));
 }
 
 let interes = 0;
@@ -45,7 +45,7 @@ if (interes == 1.5) {
 
 let valorCuotas = totalDevolucion / cuotasPrestamo;
 
-let respuestaUsuario = window.confirm("Solicitaste $" + prestamoSolicitado + ", a devolver en " + cuotasPrestamo + " cuotas de $" + valorCuotas + " c/u.\nEl interes aplicado según la cantidad de cuotas es de un " + porcentajeInteres + "%.\nEl importe total a devolver es de $" + totalDevolucion + ".\n\n¿Estás de acuerdo?");
+let respuestaUsuario = confirm("Solicitaste $" + prestamoSolicitado + ", a devolver en " + cuotasPrestamo + " cuotas de $" + valorCuotas + " c/u.\nEl interes aplicado según la cantidad de cuotas es de un " + porcentajeInteres + "%.\nEl importe total a devolver es de $" + totalDevolucion + ".\n\n¿Estás de acuerdo?");
 
 if (respuestaUsuario) {
   alert(nombre + ", tu prestamo fue generado exitosamente.\n¡Gracias por elegirnos!");
